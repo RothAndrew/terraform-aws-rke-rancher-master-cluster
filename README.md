@@ -14,11 +14,11 @@ When presented with the option between something more elegant, or something more
 
 ### What it provisions
 
-- 3 "node groups" of EC2 instances - gives you the ability to upgrade the AMI of one node group at a time to keep the cluster running. Currently does not use AutoScalingGroup due to limitations with how RKE works. Assuming it is possible, an enhancement to this module to use ASG would be welcomed if it doesn't add a lot of complexity.
+- [x] 3 "node groups" of EC2 instances - gives you the ability to upgrade the AMI of one node group at a time to keep the cluster running. Currently does not use AutoScalingGroup due to limitations with how RKE works. Assuming it is possible, an enhancement to this module to use ASG would be welcomed if it doesn't add a lot of complexity.
   - Currently it creates Ubuntu nodes with Docker installed since that was what others that came before this had done. In a later release CentOS will be used with optional use of Red Hat Enterprise Linux instead.
   - All nodes are labeled as `["controlplane", "etcd", "worker"]` - Remember this cluster should be used as the Rancher master and nothing else
-- A Classic Load Balancer with listeners on port 80 and port 443 that points to ports 80 and 443 of the cluster nodes
-- 2 Security Groups
+- [x] A Classic Load Balancer with listeners on port 80 and port 443 that points to ports 80 and 443 of the cluster nodes
+- [x] 2 Security Groups
   - The `nodes` security group is used by the EC2 instances and allows:
     - Any traffic inside its own security group
     - SSH traffic from anywhere
@@ -26,10 +26,10 @@ When presented with the option between something more elegant, or something more
     - Traffic on ports 80 and 443 from the `elb` security group
   - The `elb` security group is used by the load balancer and allows:
     - Traffic on ports 80 and 443 from anywhere
-- An AWS Key Pair with a new TLS private key - Support for using an existing key pair may be added in the future if desired.
-- A Kubernetes cluster using RKE
-- A Route53 record that configures a dnsName to point at the ELB - Support for optionally disabling this resource may be added in the future if desired.
-- Rancher Server and associated dependencies via Helm deployments
+- [x] An AWS Key Pair with a new TLS private key - Support for using an existing key pair may be added in the future if desired.
+- [x] A Kubernetes cluster using RKE
+- [ ] A Route53 record that configures a dnsName to point at the ELB - Support for optionally disabling this resource may be added in the future if desired.
+- [ ] Rancher Server and associated dependencies via Helm deployments
 
 ### Limitations
 
