@@ -33,8 +33,15 @@ resource "aws_instance" "node_group_1" {
       "Name" = "${module.label.id}-1.${count.index}"
   })
   provisioner "remote-exec" {
+    connection {
+      host        = self.public_ip
+      user        = local.ssh_user
+      private_key = tls_private_key.ssh.private_key_pem
+    }
     inline = [
-      "cloud-init status --wait"
+      "echo 'Waiting for cloud-init to complete...'",
+      "cloud-init status --wait > /dev/null",
+      "echo 'Completed cloud-init!'"
     ]
   }
 }
@@ -58,8 +65,15 @@ resource "aws_instance" "node_group_2" {
       "Name" = "${module.label.id}-2.${count.index}"
   })
   provisioner "remote-exec" {
+    connection {
+      host        = self.public_ip
+      user        = local.ssh_user
+      private_key = tls_private_key.ssh.private_key_pem
+    }
     inline = [
-      "cloud-init status --wait"
+      "echo 'Waiting for cloud-init to complete...'",
+      "cloud-init status --wait > /dev/null",
+      "echo 'Completed cloud-init!'"
     ]
   }
 }
@@ -83,8 +97,15 @@ resource "aws_instance" "node_group_3" {
       "Name" = "${module.label.id}-3.${count.index}"
   })
   provisioner "remote-exec" {
+    connection {
+      host        = self.public_ip
+      user        = local.ssh_user
+      private_key = tls_private_key.ssh.private_key_pem
+    }
     inline = [
-      "cloud-init status --wait"
+      "echo 'Waiting for cloud-init to complete...'",
+      "cloud-init status --wait > /dev/null",
+      "echo 'Completed cloud-init!'"
     ]
   }
 }

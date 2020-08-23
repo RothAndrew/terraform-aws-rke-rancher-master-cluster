@@ -1,3 +1,6 @@
 .idea
 .terraform
 .tool-versions
+terraform.tfstate
+terraform.tfstate.backup
+.terraform.tfstate.lock.info
