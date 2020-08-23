@@ -64,10 +64,6 @@ Contributors to this module should make themselves familiar with this section.
 
 This module will use SemVer, and will stay on v0.X for the forseeable future
 
-### TO-DO
-
-[X] test
-
 <!-- prettier-ignore-start -->
 <!-- BEGINNING OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
 ## Requirements
