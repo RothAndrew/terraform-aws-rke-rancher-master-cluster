@@ -64,8 +64,8 @@ This module will use SemVer, and will stay on v0.X for the forseeable future
 
 | Name | Description |
 |------|-------------|
-| cluster\_kubeconfig | KUBECONFIG yaml file contents to connect to the cluster. DO NOT USE unless you have no other options. Users should use the KUBECONFIG that Rancher provides to them rather than this. |
-| ssh\_private\_key | Cluster nodes' private SSH key |
+| cluster\_kubeconfig | [SENSITIVE] KUBECONFIG yaml file contents to connect to the cluster. DO NOT USE unless you have no other options. Users should use the KUBECONFIG that Rancher provides to them rather than this. |
+| ssh\_private\_key | [SENSITIVE] Cluster nodes' private SSH key |
 | ssh\_public\_key | Cluster nodes' public SSH key |
 
 <!-- END OF PRE-COMMIT-TERRAFORM DOCS HOOK -->
