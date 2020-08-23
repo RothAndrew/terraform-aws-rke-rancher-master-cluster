@@ -8,8 +8,6 @@ The purpose of this module is to give an easy way to stand up a production-ready
 
 When presented with the option between something more elegant, or something more simple, the more simple route will always be taken. This module is meant to be easy to understand and maintain. Conditional logic that turns things on and off will be kept to a minimum.
 
-In order to support GovCloud and DISA requirements, RKE is used rather than EKS
-
 ## Usage
 
 ### Prerequisites
