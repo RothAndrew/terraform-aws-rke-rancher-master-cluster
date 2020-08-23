@@ -10,7 +10,7 @@ output "ssh_private_key" {
 }
 
 output "cluster_kubeconfig" {
-  description = "KUBECONFIG yaml file contents to connect to the cluster. DO NOT USE unless you have no other options. All connections to the cluster should go through Rancher."
+  description = "KUBECONFIG yaml file contents to connect to the cluster. DO NOT USE unless you have no other options. Users should use the KUBECONFIG that Rancher provides to them rather than this."
   value       = rke_cluster.default.kube_config_yaml
   sensitive   = true
 }
