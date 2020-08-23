@@ -2,14 +2,8 @@ provider "aws" {
   region = var.region
 }
 
-terraform {
-  required_providers {
-    rke = {
-      source  = "rancher/rke"
-      version = "1.0.1"
-      debug   = true
-    }
-  }
+provider "rke" {
+  debug = true
 }
 
 module "vpc" {
@@ -34,6 +28,7 @@ module "subnets" {
 }
 
 module "rke_rancher_master_cluster" {
+  //source                 = "git::https://github.com/RothAndrew/terraform-aws-rke-rancher-master-cluster.git?ref=tags/x.y.z"
   source                 = "../.."
   additional_tag_map     = {}
   instance_type          = var.instance_type

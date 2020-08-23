@@ -2,10 +2,6 @@ provider "aws" {
   region = var.region
 }
 
-provider "rke" {
-  debug = true
-}
-
 locals {
   //  Most of these should eventually get moved to variables, but they are staying hard coded for now for simplicity.
   ssh_user           = "ubuntu"
