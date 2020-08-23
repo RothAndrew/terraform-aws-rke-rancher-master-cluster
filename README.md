@@ -46,6 +46,8 @@ When presented with the option between something more elegant, or something more
 
 See [examples/complete](examples/complete) for an example of how to use this module. This module does not require anything special, just use the standard `terraform apply`/`terraform destroy`.
 
+TODO: Add instructions on how to login to Rancher after everything is provisioned.
+
 ## Developer Guide
 
 Contributors to this module should make themselves familiar with this section.
