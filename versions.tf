@@ -18,5 +18,9 @@ terraform {
       source  = "rancher/rke"
       version = ">= 1.0.0, < 2.0.0"
     }
+    template = {
+      source  = "hashicorp/template"
+      version = ">= 2.0.0, < 3.0.0"
+    }
   }
 }

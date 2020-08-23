@@ -30,6 +30,7 @@ This module will use SemVer, and will stay on v0.X for the forseeable future
 | aws | >= 2.0.0, < 3.0.0 |
 | random | >= 2.0.0, < 3.0.0 |
 | rke | >= 1.0.0, < 2.0.0 |
+| template | >= 2.0.0, < 3.0.0 |
 | tls | >= 2.0.0, < 3.0.0 |
 
 ## Providers
@@ -39,7 +40,7 @@ This module will use SemVer, and will stay on v0.X for the forseeable future
 | aws | >= 2.0.0, < 3.0.0 |
 | random | >= 2.0.0, < 3.0.0 |
 | rke | >= 1.0.0, < 2.0.0 |
-| template | n/a |
+| template | >= 2.0.0, < 3.0.0 |
 | tls | >= 2.0.0, < 3.0.0 |
 
 ## Inputs
